@@ -1,0 +1,1 @@
+A small-chain fast food burger joint's website
