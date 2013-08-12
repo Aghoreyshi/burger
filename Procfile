@@ -1,1 +1,1 @@
-web: gunicorn burger:app
+web: newrelic-admin run-program gunicorn burger:app
