@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% block head %}
-        <title>Burger Box{% block title %}{% endblock %}</title>
+        
+        <title>Burger Box - Menu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -22,7 +22,7 @@
         <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
         <script src="/burger/static/js/respond.min.js"></script>
 
-        <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
+        <link rel="shortcut icon" href="/static/ico/favicon.ico">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -34,13 +34,13 @@
           ga('create', 'UA-43306119-2', 'burgerbox.biz');
           ga('send', 'pageview');
         </script>
-        {% endblock %}
-        {% block morehead %}
-        {% endblock morehead %}
+        
+        
+        
     </head>
 
   <body>
-      {% block navbar %}
+      
       <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -55,42 +55,87 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                {% block navtabs %}
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="menu">Menu</a></li>
-                <li><a href="locations">Locations</a></li>
-                <li><a href="contact">Contact Us</a></li>
-                {% endblock navtabs %}
+                
+<li><a href="/">Home</a></li>
+<li class="active"><a href="menu">Menu</a></li>
+<li><a href="locations">Locations</a></li>
+<li><a href="contact">Contact Us</a></li>
+
             </ul>
           </div>
       </nav>
-      {% block padding %}
+      
       <style media="screen" type="text/css">
           .container {
             padding-left: 10px;
           }
       </style>
-      {% endblock padding %}
-      {% endblock navbar %}
+      
+      
 
       <div class="container page text-center">
           <div class="content">
-              {% block content %}
-              {% endblock %}
+              
+<h2 class="text-success">Menu</h2>
+<div class="row container">
+  <div class="col-md-3">
+    <h3 style="color: #FF9900">Burgers and Sandwiches</h3>
+    <ul class="list-unstyled">
+      <li>Box Burger</li>
+      <li>Cheeseburger</li>
+      <li>Double Double</li>
+      <li>Mushroom Swiss Burger</li>
+      <li>Crispy Chicken Sandwich</li>
+      <li>Grilled Chicken Sandwich</li>
+      <li>Philly Cheesesteak</li>
+    </ul>
+    <small>Add bacon, jalapenos, or mushrooms for a bit extra!</small>
+  </div>
+  <div class="col-md-3">
+    <h3 style="color: #FF9900">Plates</h3>
+    <ul class="list-unstyled">
+      <li>Chicken Tenders</li>
+      <li>Steak Fingers</li>
+      <li>Chicken Fried Steak Dinner</li>
+      <li>Crispy Chicken Salad</li>
+      <li>Grilled Chicken Salad</li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h3 style="color: #FF9900">Sides</h3>
+    <ul class="list-unstyled">
+      <li>French Fries</li>
+      <li>Onion Rings</li>
+      <li>Tator Tots</li>
+      <li>Jalapeno Poppers</li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h3 style="color: #FF9900">Desserts</h3>
+    <ul class="list-unstyled">
+      <li>Blue Bell Ice Cream</li>
+      <li>Hand Made Milk Shake</li>
+      <li>Ice Cream Sundae</li>
+      <li>Apple Pie</li>
+      <li>Lemon Pie</li>
+    </ul>
+  </div>
+
+
           </div>
 
           <hr>
 
-          {% block footer %}
+          
           <footer class="footer">
               <p style="margin-bottom: 0px">&copy; <span style="color: #FF9900">Burger Box</span></p>
               <p><a href="mailto:parvinkarshenas@gmail.com" class="icon-envelope-alt icon"></a></p>
           </footer>
-          {% endblock %}
+          
 
       </div>
-      {% block js_footer %}
+      
           <script src="/burger/static/js/bootstrap.min.js"></script>
-      {% endblock %}
+      
   </body>
 </html>

@@ -1,10 +1,9 @@
 import os
 
 from flask import Flask, render_template, send_from_directory
-#from werkzeug.contrib.fixers import ProxyFix
-
 
 app = Flask(__name__)
+app.config.from_pyfile('settings.py')
 
 #----------------------------------------
 # controllers
