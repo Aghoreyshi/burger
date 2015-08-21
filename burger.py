@@ -1,10 +1,9 @@
 import os
 
-from flask import Flask, render_template, send_from_directory
-#from werkzeug.contrib.fixers import ProxyFix
-
+from flask import Flask, render_template, send_from_directory, make_response
 
 app = Flask(__name__)
+app.config.from_pyfile('settings.py')
 
 #----------------------------------------
 # controllers
@@ -20,19 +19,27 @@ def page_not_found(e):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    resp = make_response(render_template('index.html'))
+    resp.headers['Content-type'] = 'text/html; charset=utf-8'
+    return resp
 
 @app.route('/menu')
 def menu():
-    return render_template('menu.html')
+    resp = make_response(render_template('menu.html'))
+    resp.headers['Content-type'] = 'text/html; charset=utf-8'
+    return resp
 
 @app.route('/locations')
 def locations():
-    return render_template('locations.html')
+    resp = make_response(render_template('locations.html'))
+    resp.headers['Content-type'] = 'text/html; charset=utf-8'
+    return resp
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    resp = make_response(render_template('contact.html'))
+    resp.headers['Content-type'] = 'text/html; charset=utf-8'
+    return resp
 
 #app.wsgi_app = ProxyFix(app.wsgi_app)
 

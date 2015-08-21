@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% block head %}
-        <title>Burger Box{% block title %}{% endblock %}</title>
+        
+        <title>Burger Box - Locations</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -22,7 +22,7 @@
         <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
         <script src="/burger/static/js/respond.min.js"></script>
 
-        <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
+        <link rel="shortcut icon" href="/burger/static/ico/favicon.ico">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -34,13 +34,13 @@
           ga('create', 'UA-43306119-2', 'burgerbox.biz');
           ga('send', 'pageview');
         </script>
-        {% endblock %}
-        {% block morehead %}
-        {% endblock morehead %}
+        
+        
+        
     </head>
 
   <body>
-      {% block navbar %}
+      
       <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -55,42 +55,60 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                {% block navtabs %}
-                <li class="active"><a href="/burger">Home</a></li>
-                <li><a href="menu">Menu</a></li>
-                <li><a href="locations">Locations</a></li>
-                <li><a href="contact">Contact Us</a></li>
-                {% endblock navtabs %}
+                
+<li><a href="/">Home</a></li>
+<li><a href="menu">Menu</a></li>
+<li class="active"><a href="locations">Locations</a></li>
+<li><a href="contact">Contact Us</a></li>
+
             </ul>
           </div>
       </nav>
-      {% block padding %}
+      
       <style media="screen" type="text/css">
           .container {
             padding-left: 10px;
           }
       </style>
-      {% endblock padding %}
-      {% endblock navbar %}
+      
+      
 
       <div class="container page text-center">
           <div class="content">
-              {% block content %}
-              {% endblock %}
+              
+<h5>Check out our locations in <span class="text-success">Ft. Worth</span> and <span class="text-warning">Arlington.</span></h5>
+<h6>Find info and directions by selecting the <span class="text-danger">red markers</span> on the map.</h6>
+
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+  </div>
+  <div class="panel-body">
+
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Burger+Box&amp;aq=&amp;sll=32.75942,-97.259028&amp;sspn=0.300265,0.534897&amp;ie=UTF8&amp;hq=Burger+Box&amp;hnear=&amp;t=m&amp;ll=32.700644,-97.395172&amp;spn=0.202235,0.291824&amp;z=11&amp;output=embed"></iframe><br />
+
+  </div>
+
+  <div class="panel-footer">
+    <a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Burger+Box&amp;aq=&amp;sll=32.75942,-97.259028&amp;sspn=0.300265,0.534897&amp;ie=UTF8&amp;hq=Burger+Box&amp;hnear=&amp;t=m&amp;ll=32.700644,-97.395172&amp;spn=0.202235,0.291824&amp;z=11" class="btn btn-primary btn-lg btn-warning" target="_blank">Larger Map</a>
+  </div>
+</div>
+
+
           </div>
 
           <hr>
 
-          {% block footer %}
+          
           <footer class="footer">
               <p style="margin-bottom: 0px">&copy; <span style="color: #FF9900">Burger Box</span></p>
               <p><a href="mailto:parvinkarshenas@gmail.com" class="icon-envelope-alt icon"></a></p>
           </footer>
-          {% endblock %}
+          
 
       </div>
-      {% block js_footer %}
+      
           <script src="/burger/static/js/bootstrap.min.js"></script>
-      {% endblock %}
+      
   </body>
 </html>
